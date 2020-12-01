@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="container d-flex">
+    <div class="container d-flex mb-5">
       <Logo />
       <NavItems />
     </div>

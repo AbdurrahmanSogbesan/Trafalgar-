@@ -10,6 +10,9 @@ export default {
     text: {
       type: String,
     },
+    // fontSize: {
+    //   type: Number + "px",
+    // },
   },
 };
 </script>

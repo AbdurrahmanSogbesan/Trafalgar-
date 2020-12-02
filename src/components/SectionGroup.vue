@@ -2,7 +2,7 @@
   <div>
     <SectionTitle :text="title" />
     <SectionBody :text="body" />
-    <Button :text="buttonProps.text" />
+    <Button :text="buttonProps.text" :btnClass="buttonProps.btnClass" />
   </div>
 </template>
 

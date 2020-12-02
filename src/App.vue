@@ -10,7 +10,7 @@
             :buttonProps="{ text: 'Consult Today' }"
           />
         </div>
-        <div class="col-7"><IntroSectionGraphic /></div>
+        <div class="col-7"><IntroSectionGraphic class="graphic-img"/></div>
       </section>
     </div>
   </div>
@@ -32,4 +32,8 @@ export default {
 </script>
 
 <style lang="scss">
+  .graphic-img {
+    width: 100%;
+    margin-left: 50px;
+  }
 </style>

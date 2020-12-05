@@ -9,10 +9,11 @@ export default {
   props: {
     text: {
       type: String,
-    }, btnClass: {
-        type: String,
-        default: ''
-    }
+    },
+    btnClass: {
+      type: String,
+      default: "",
+    },
   },
 };
 </script>
@@ -28,6 +29,7 @@ export default {
   font-weight: bold;
   font-size: 18px;
   box-sizing: border-box;
+  outline: none;
 }
 
 .button.outline {

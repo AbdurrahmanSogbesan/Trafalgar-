@@ -39,11 +39,29 @@
               hasLine
             />
             <SectionBody
+              class="body-margin-bottom"
               text="Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver"
               bodyFontSize="18px"
             />
+            <Button btnClass="outline" text="Learn More" />
           </div>
         </div>
+      </section>
+      <section class="row download-section">
+        <div class="col-5">
+          <SectionTitle
+            text="Download our mobile apps"
+            fontSize="36px"
+            hasLine
+          />
+          <SectionBody
+            class="body-margin-bottom"
+            text="Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"
+            bodyFontSize="18px"
+          />
+          <Button btnClass="outline" text="Download" />
+        </div>
+        <div class="col-7"><DownloadGraphic class="graphic-img"/></div>
       </section>
     </div>
   </div>
@@ -58,6 +76,7 @@ import SectionBody from "./components/SectionBody.vue";
 import ServiceList from "./components/ServiceList.vue";
 import Button from "./components/Button.vue";
 import LeadingProvidersGraphic from "./components/LeadingProvidersGraphic.vue";
+import DownloadGraphic from "./components/DownloadGraphic.vue";
 
 export default {
   name: "App",
@@ -70,6 +89,7 @@ export default {
     ServiceList,
     Button,
     LeadingProvidersGraphic,
+    DownloadGraphic,
   },
 };
 </script>
@@ -92,5 +112,11 @@ export default {
 }
 .margin {
   margin-left: 50px;
+}
+.body-margin-bottom {
+  margin-bottom: 37px !important;
+}
+.download-section {
+  margin-top: 240px;
 }
 </style>

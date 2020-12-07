@@ -1,10 +1,14 @@
 <template>
   <div>
-    <button class="button" :class="[btnClass]">{{ text }}</button>
+    <button class="button" :class="[btnClass]">
+      <span>{{ text }}</span>
+      <component :is="icon" v-if="icon" class="ml-3"></component>
+    </button>
   </div>
 </template>
 
 <script>
+
 export default {
   props: {
     text: {
@@ -14,7 +18,10 @@ export default {
       type: String,
       default: "",
     },
-  },
+    icon: {
+      type: Object,
+    },
+  }
 };
 </script>
 
@@ -30,6 +37,10 @@ export default {
   font-size: 18px;
   box-sizing: border-box;
   outline: none;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .button.outline {

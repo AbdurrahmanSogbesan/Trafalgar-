@@ -59,7 +59,7 @@
             text="Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"
             bodyFontSize="18px"
           />
-          <Button btnClass="outline" text="Download" />
+          <Button btnClass="outline" text="Download" :icon="DownloadIcon"/>
         </div>
         <div class="col-7"><DownloadGraphic class="graphic-img"/></div>
       </section>
@@ -77,9 +77,16 @@ import ServiceList from "./components/ServiceList.vue";
 import Button from "./components/Button.vue";
 import LeadingProvidersGraphic from "./components/LeadingProvidersGraphic.vue";
 import DownloadGraphic from "./components/DownloadGraphic.vue";
+import DownloadIcon from "./components/DownloadIcon.vue";
+
 
 export default {
   name: "App",
+  data() {
+    return {
+      DownloadIcon
+    }
+  },
   components: {
     Header,
     SectionGroup,

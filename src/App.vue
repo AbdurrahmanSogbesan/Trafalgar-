@@ -63,6 +63,9 @@
         </div>
         <div class="col-7"><DownloadGraphic class="graphic-img"/></div>
       </section>
+      <section>
+        <TestimonialCard />
+      </section>
     </div>
   </div>
 </template>
@@ -78,6 +81,7 @@ import Button from "./components/Button.vue";
 import LeadingProvidersGraphic from "./components/LeadingProvidersGraphic.vue";
 import DownloadGraphic from "./components/DownloadGraphic.vue";
 import DownloadIcon from "./components/DownloadIcon.vue";
+import TestimonialCard from "./components/TestimonialCard.vue";
 
 
 export default {
@@ -97,6 +101,7 @@ export default {
     Button,
     LeadingProvidersGraphic,
     DownloadGraphic,
+    TestimonialCard
   },
 };
 </script>

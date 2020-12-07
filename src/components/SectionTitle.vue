@@ -1,7 +1,7 @@
 <template>
-  <div class="title" :style="{ 'font-size': fontSize }" :class="[textClass]">
+  <div class="title" :style="{ 'font-size': fontSize, 'color': color }" :class="[textClass]">
     {{ text }}
-    <SectionTitleLine v-if="hasLine"/>
+    <SectionTitleLine :color="lineColor" v-if="hasLine"/>
   </div>
 </template>
 
@@ -20,10 +20,18 @@ export default {
       type: String,
       default: "48px",
     },
+    color: {
+      type: String,
+      default: "black",
+    },
     hasLine: {
       type: Boolean,
       default: false,
     },
+    lineColor: {
+      type: String,
+      default: 'black'
+    }
   },
   components: {
     SectionTitleLine,

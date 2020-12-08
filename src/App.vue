@@ -63,8 +63,12 @@
         </div>
         <div class="col-7"><DownloadGraphic class="graphic-img"/></div>
       </section>
-      <section>
+      <section class="testimonial">
         <TestimonialCard />
+      </section>
+      <section class="article">
+        <SectionTitle text="Check out our latest article" fontSize="36px" hasLine/>
+        <ArticleList />
       </section>
     </div>
   </div>
@@ -82,6 +86,7 @@ import LeadingProvidersGraphic from "./components/LeadingProvidersGraphic.vue";
 import DownloadGraphic from "./components/DownloadGraphic.vue";
 import DownloadIcon from "./components/DownloadIcon.vue";
 import TestimonialCard from "./components/TestimonialCard.vue";
+import ArticleList from "./components/ArticleList.vue";
 
 
 export default {
@@ -101,7 +106,8 @@ export default {
     Button,
     LeadingProvidersGraphic,
     DownloadGraphic,
-    TestimonialCard
+    TestimonialCard,
+    ArticleList
   },
 };
 </script>
@@ -130,5 +136,11 @@ export default {
 }
 .download-section {
   margin-top: 240px;
+}
+.testimonial {
+  margin-bottom: 216px;
+}
+.article {
+  text-align: center;
 }
 </style>

@@ -71,6 +71,9 @@
         <ArticleList />
       </section>
     </div>
+    <section>
+      <Footer />
+    </section>
   </div>
 </template>
 
@@ -87,6 +90,7 @@ import DownloadGraphic from "./components/DownloadGraphic.vue";
 import DownloadIcon from "./components/DownloadIcon.vue";
 import TestimonialCard from "./components/TestimonialCard.vue";
 import ArticleList from "./components/ArticleList.vue";
+import Footer from "./components/Footer.vue";
 
 
 export default {
@@ -109,7 +113,8 @@ export default {
     LeadingProvidersGraphic,
     DownloadGraphic,
     TestimonialCard,
-    ArticleList
+    ArticleList, 
+    Footer
   },
 };
 </script>

@@ -64,7 +64,7 @@
         <div class="col-7"><DownloadGraphic class="graphic-img"/></div>
       </section>
       <section class="testimonial">
-        <TestimonialCard />
+        <TestimonialCard :person="person"/>
       </section>
       <section class="article">
         <SectionTitle text="Check out our latest article" fontSize="36px" hasLine/>
@@ -93,7 +93,9 @@ export default {
   name: "App",
   data() {
     return {
-      DownloadIcon
+      DownloadIcon,
+      person:
+        {image: require("@/assets/images/Mask Group.png"),name:"Edward Newgate", title:"Founder Circle", quote: "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"}
     }
   },
   components: {

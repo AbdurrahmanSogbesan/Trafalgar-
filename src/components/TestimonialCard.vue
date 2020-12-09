@@ -9,11 +9,9 @@
       class="title"
     />
     <div class="testimonial-body">
-      <TestimonialPerson name="Edward Newgate" title="Founder Circle"/>
+      <TestimonialPerson :person="person"/>
       <div class="testimonial-text">
-        “Our dedicated patient engagement app and web portal allow you to access
-        information instantaneously (no tedeous form, long calls, or
-        administrative hassle) and securely”
+        "{{ person.quote }}"
       </div>
     </div>
   </div>
@@ -24,6 +22,16 @@ import SectionTitle from "./SectionTitle.vue";
 import TestimonialPerson from "./TestimonialPerson.vue";
 
 export default {
+  props: {
+    person: {
+      type: Object    
+      },
+  },
+  data() {
+    return {
+      
+    }
+  },
   components: {
     SectionTitle,
     TestimonialPerson,

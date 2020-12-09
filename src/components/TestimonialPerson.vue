@@ -1,9 +1,9 @@
 <template>
   <div class="person align-items-center">
-    <img src="@/assets/images/Mask Group.png" class="image" />
+    <img :src="person.image" class="image" />
     <div class="person-details">
-      <div class="name">{{ name }}</div>
-      <div class="title">{{ title }}</div>
+      <div class="name">{{ person.name }}</div>
+      <div class="title">{{ person.title }}</div>
     </div>
   </div>
 </template>
@@ -11,8 +11,7 @@
 <script>
 export default {
   props: {
-    name: String,
-    title: String,
+    person: Object
   },
 };
 </script>

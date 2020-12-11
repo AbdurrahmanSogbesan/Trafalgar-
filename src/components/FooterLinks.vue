@@ -19,7 +19,13 @@
         color: #FFF;
         padding-left: 0;
         margin-right: 111px;
+
+        
+    @media (max-width:480px) {
+        padding-left: 0;
+        margin-right: unset;
     }
+}
     .title {
         font-weight: bold;
         font-size: 20px;

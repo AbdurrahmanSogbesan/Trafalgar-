@@ -46,5 +46,9 @@ export default {
   line-height: 56px;
   color: #000000;
   margin-bottom: 25px;
+
+  @media (max-width: 480px) {
+    text-align: center;
+  }
 }
 </style>

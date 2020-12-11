@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="[wrapperClass]">
     <button class="button" :class="[btnClass]">
       <span>{{ text }}</span>
       <component :is="icon" v-if="icon" class="ml-3"></component>
@@ -15,6 +15,10 @@ export default {
       type: String,
     },
     btnClass: {
+      type: String,
+      default: "",
+    },
+    wrapperClass: {
       type: String,
       default: "",
     },

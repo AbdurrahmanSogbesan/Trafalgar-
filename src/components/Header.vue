@@ -2,7 +2,12 @@
   <div class="header">
     <div class="container d-flex mb-5">
       <Logo />
-      <NavItems />
+      <NavItems class="d-md-flex d-none"/>
+      <div class="d-md-none d-block toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   </div>
 </template>
@@ -25,6 +30,15 @@ export default {
   .container {
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.toggle {
+  div {
+    height: 3px;
+    margin-bottom: 4px;
+    background-color: black;
+    width: 24px;
   }
 }
 </style>

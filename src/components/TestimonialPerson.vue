@@ -20,6 +20,16 @@ export default {
 .person {
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 480px) {
+    margin-bottom: 34px;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 11px;
+    padding-top: 34px;
+    padding-bottom: 19px;
+  }
 }
 
 .image {
@@ -29,6 +39,12 @@ export default {
 .person-details {
     text-align: left;
     margin-left: 29px;
+
+    @media (max-width: 480px) {
+    margin-top: 22px;
+    margin-left: 0;
+    text-align: center;
+  }
 }
 .name {
   font-size: 22px;

@@ -8,9 +8,9 @@
       lineColor="white"
       class="title"
     />
-    <div class="testimonial-body">
+    <div class="testimonial-body flex-md-row flex-column">
       <TestimonialPerson :person="person"/>
-      <div class="testimonial-text">
+      <div class="testimonial-text text-resp">
         "{{ person.quote }}"
       </div>
     </div>
@@ -42,12 +42,18 @@ export default {
 <style lang="scss" scoped>
 .testimonial {
   margin-top: 266px;
-  width: 1120px;
-  height: 425px;
+  margin-bottom: 216px;
+  width: 100%;
+  // height: 425px;
   background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
   border-radius: 24px;
   padding: 64px 118px 79px 118px;
   text-align: center;
+
+  @media (max-width: 480px) {
+    padding: 23px;
+    margin-top: 100px;
+  }
 }
 .title {
     margin-bottom: 45px !important;

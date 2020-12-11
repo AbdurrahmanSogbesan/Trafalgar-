@@ -57,5 +57,9 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 69px;
+  
+  @media (max-width:480px) {
+    flex-direction: column !important;
+  }
 }
 </style>

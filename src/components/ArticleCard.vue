@@ -1,5 +1,5 @@
 <template>
-  <div class="article-card" >
+  <div class="article-card mb-md-0 mb-5" >
     <img :src="article.img" />
     <div class="article-text">
       <div class="article-title">

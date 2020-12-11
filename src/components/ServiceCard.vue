@@ -1,5 +1,5 @@
 <template>
-  <div class="col-4 service-container">
+  <div class="col-md-4 col-12 service-container">
     <div class="service-card">
     <component class="component-padding" :is="service.icon"> </component>
     <div class="title">{{ service.title }}</div>

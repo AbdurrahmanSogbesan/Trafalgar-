@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="section-group">
     <SectionTitle :text="title" :textClass="textClass" :fontSize="titleFontSize" :hasLine="titleHasLine"/>
     <SectionBody :text="body" :bodyFontSize="bodyFontSize"/>
     <Button :text="buttonProps.text" :btnClass="buttonProps.btnClass" />
@@ -46,4 +46,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.section-group{
+  text-align: center;
+
+  @media (min-width: 480px) {
+    text-align: left;
+  }
+}
 </style>

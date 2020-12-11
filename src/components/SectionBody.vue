@@ -26,5 +26,9 @@ export default {
   color: #7d7987;
   mix-blend-mode: normal;
   margin-bottom: 80px;
+
+  @media (max-width: 480px) {
+    text-align: center;
+  }
 }
 </style>

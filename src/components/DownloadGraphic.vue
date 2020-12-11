@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="@/assets/images/trafalgar-illustration sec03 1.png" alt="" />
+    <img src="@/assets/images/trafalgar-illustration sec03 1.png" alt="" class="img" />
   </div>
 </template>
 
@@ -9,4 +9,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+  .img {
+    width: 100%;
+  }
 </style>

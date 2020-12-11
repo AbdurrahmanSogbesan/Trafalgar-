@@ -3,14 +3,14 @@
     <Header />
     <div class="container">
       <section class="intro-section row align-items-center">
-        <div class="col-5">
+        <div class="col-md-5 col-12">
           <SectionGroup
             title="Virtual healthcare for you"
             body="Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone"
             :buttonProps="{ text: 'Consult Today' }"
           />
         </div>
-        <div class="col-7"><IntroSectionGraphic class="graphic-img" /></div>
+        <div class="col-md-7 col-12"><IntroSectionGraphic class="graphic-img" /></div>
       </section>
       <section class="services">
         <div class="container services">
@@ -28,46 +28,38 @@
         <Button text="Learn More" btnClass="outline" />
       </div>
       <section class="row">
-        <div class="col-7">
-          <LeadingProvidersGraphic />
+        <div class="col-md-7 col-12">
+          <LeadingProvidersGraphic class="mb-5"/>
         </div>
-        <div class="col-5">
+        <div class="col-md-5 col-12">
           <div class="margin">
-            <SectionTitle
-              text="Leading healthcare providers"
-              fontSize="36px"
-              hasLine
-            />
+            <SectionTitle text="Leading healthcare providers" fontSize="36px" hasLine />
             <SectionBody
               class="body-margin-bottom"
               text="Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver"
               bodyFontSize="18px"
             />
-            <Button btnClass="outline" text="Learn More" />
+            <Button btnClass="outline" text="Learn More" wrapperClass="text-resp" />
           </div>
         </div>
       </section>
       <section class="row download-section">
-        <div class="col-5">
-          <SectionTitle
-            text="Download our mobile apps"
-            fontSize="36px"
-            hasLine
-          />
+        <div class="col-md-5 col-12">
+          <SectionTitle text="Download our mobile apps" fontSize="36px" hasLine />
           <SectionBody
             class="body-margin-bottom"
             text="Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"
             bodyFontSize="18px"
           />
-          <Button btnClass="outline" text="Download" :icon="DownloadIcon"/>
+          <Button btnClass="outline" text="Download" :icon="DownloadIcon" wrapperClass="text-resp"/>
         </div>
-        <div class="col-7"><DownloadGraphic class="graphic-img"/></div>
+        <div class="col-md-7 col-12"><DownloadGraphic class="graphic-img" /></div>
       </section>
-      <section class="testimonial">
-        <TestimonialCard :person="person"/>
+      <section>
+        <TestimonialCard :person="person" />
       </section>
       <section class="article">
-        <SectionTitle text="Check out our latest article" fontSize="36px" hasLine/>
+        <SectionTitle text="Check out our latest article" fontSize="36px" hasLine />
         <ArticleList />
       </section>
     </div>
@@ -92,15 +84,19 @@ import TestimonialCard from "./components/TestimonialCard.vue";
 import ArticleList from "./components/ArticleList.vue";
 import Footer from "./components/Footer.vue";
 
-
 export default {
   name: "App",
   data() {
     return {
       DownloadIcon,
-      person:
-        {image: require("@/assets/images/Mask Group.png"),name:"Edward Newgate", title:"Founder Circle", quote: "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"}
-    }
+      person: {
+        image: require("@/assets/images/Mask Group.png"),
+        name: "Edward Newgate",
+        title: "Founder Circle",
+        quote:
+          "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely",
+      },
+    };
   },
   components: {
     Header,
@@ -113,8 +109,8 @@ export default {
     LeadingProvidersGraphic,
     DownloadGraphic,
     TestimonialCard,
-    ArticleList, 
-    Footer
+    ArticleList,
+    Footer,
   },
 };
 </script>
@@ -123,6 +119,11 @@ export default {
 .graphic-img {
   width: 100%;
   margin-left: 80px;
+
+  @media (max-width: 480px) {
+    margin-left: 0;
+    margin-top: 60px;
+  }
 }
 .services {
   margin-top: 190px;
@@ -134,20 +135,30 @@ export default {
 .button-center {
   text-align: center;
   margin-bottom: 221px;
+
+  @media (max-width: 480px) {
+    margin-bottom: 100px;
+  }
 }
 .margin {
   margin-left: 50px;
+
+  @media (max-width: 480px) {
+    margin-left: 0;
+  }
 }
 .body-margin-bottom {
   margin-bottom: 37px !important;
 }
 .download-section {
   margin-top: 240px;
-}
-.testimonial {
-  margin-bottom: 216px;
+
+  @media(max-width: 480px){
+      margin-top: 100px;
+    }
 }
 .article {
   text-align: center;
+
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="body">
+  <div class="body" :style="{ 'font-size': bodyFontSize }">
     {{ text }}
   </div>
 </template>
@@ -10,6 +10,10 @@ export default {
     text: {
       type: String,
     },
+    bodyFontSize: {
+      type: String,
+      default: "21px"
+    }
   },
 };
 </script>
@@ -21,6 +25,6 @@ export default {
   line-height: 32px;
   color: #7d7987;
   mix-blend-mode: normal;
-  margin-bottom: 45px;
+  margin-bottom: 80px;
 }
 </style>

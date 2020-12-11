@@ -1,18 +1,40 @@
 <template>
-  <div class="title">
+  <div class="title" :style="{ 'font-size': fontSize, 'color': color }" :class="[textClass]">
     {{ text }}
+    <SectionTitleLine :color="lineColor" v-if="hasLine"/>
   </div>
 </template>
 
 <script>
+import SectionTitleLine from "./SectionTitleLine.vue";
+
 export default {
   props: {
     text: {
       type: String,
     },
-    // fontSize: {
-    //   type: Number + "px",
-    // },
+    textClass: {
+      type: String,
+    },
+    fontSize: {
+      type: String,
+      default: "48px",
+    },
+    color: {
+      type: String,
+      default: "black",
+    },
+    hasLine: {
+      type: Boolean,
+      default: false,
+    },
+    lineColor: {
+      type: String,
+      default: 'black'
+    }
+  },
+  components: {
+    SectionTitleLine,
   },
 };
 </script>
